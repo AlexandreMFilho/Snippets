@@ -1,0 +1,131 @@
+@import url("./form.css");
+:root{
+    --cor-1:#0072CE;
+    --cor-2:#f9423A;
+    --cor-3:#ad841f;
+}
+
+
+.main-frame{
+    margin: 2%;
+    margin-top: 110px;
+    
+    padding: 0.25%;
+    padding-top: 10px;
+
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px 0px #55555555;
+}
+
+footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: var(--cor-1);
+    color: white;
+    text-align: center;
+    padding: 0.25%;
+    font-size: 0.8rem;
+
+}
+
+.btn-primary{
+    background-color: var(--cor-1)  ;
+}
+.table-responsive td{
+    filter: alpha(opacity=60);
+    /* IE */
+    -moz-opacity: 0.6;
+    /* Mozilla */
+    opacity: 0.9;
+    /* CSS3 */
+}
+tr:hover{
+    background-color: var(--cor-1);
+
+}
+.acoes{
+    min-width: 90px;
+}
+
+i{
+    padding: 1% !important;
+    border-radius: 5px;
+}
+
+i:hover{
+    color: var(--cor-1);
+    border-top-color: var(--cor-1);
+    border-top-style: solid;
+    border-top-width: 2px;
+    border-bottom-color: var(--cor-1);
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+
+}
+
+.ql-toolbar,
+.editor
+{
+    border-radius: 10px;
+    margin-top: 0.5%;
+
+}
+.ql-editor{
+    min-height: 300px;
+
+}
+
+.form-floating label{
+    margin-left: 3%;
+}
+
+.btn-group{
+    padding: 3%;
+}
+
+.form-select{
+    padding-top: 3%;
+}
+
+:root{
+    --cor-primaria: #0072CE;
+    --cor-primaria-escura: #0b5d9f;
+    --cor-secundaria: #f9423A;
+    --cor-terciaria: #ad841f;
+}
+
+.btn-primaria{
+    background-color: var(--cor-primaria);
+    color: white;
+    transition: 0.5s;
+}
+
+.btn-primaria:hover{
+    background-color: var(--cor-primaria);
+    color: white;
+    transition: 1s;
+    transform: scale(1.2);
+}
+
+.btn-secundaria{
+    background-color: var(--cor-secundaria);
+    color: white;
+}
+
+.navbar-toggler {
+    border-color: white;
+    padding: 0.5%;
+  } 
+  .navbar-toggler:active {
+    border-color: white;
+  }
+
+.controles{
+    width: 40%;
+}
+
+.bg-body-primary{
+    background-color: var(--cor-1);
+}
+

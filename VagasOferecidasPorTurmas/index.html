@@ -1,0 +1,712 @@
+<html lang="pt_BR"  >
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../assets/bootstrap-5.3.2-dist/css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/bootstrap-icons/font/bootstrap-icons.css">
+ 
+    
+    <link rel="stylesheet" href="../assets/DataTables/datatables.min.css" />
+
+    <link href="../assets/css/index.css" rel="stylesheet">
+    <link href="../assets/css/bstreeview.css" rel="stylesheet">
+
+    <title>Graduação Online</title>
+
+</head>
+<body>
+    
+    <header></header>
+    
+    <section class="card main-frame"> 
+        <p>Vagas oferecidas por turma</p>
+        <p>Selecione a unidade</p>
+        <div class="container">
+            <form>
+
+                <div class="row align-items-center">
+                    <div class="col-md-6 form-group">
+                        <div class="d-flex align-items-center">
+                            <label class="me-2">Unidade: </label>
+                            <select name="unidade"  class="form-control form-vagas-oferecidas" >
+                                <option>IME - INSTITUTO DE MATEMÁTICA E ESTATÍSTICA</option>
+                                <option>ILE - INSTITUTO DE LETRAS</option>
+                                <option>NUT - INSTITUTO DE NUTRIÇÃO</option>
+                                <option>FIS - INSTITUTO DE FÍSICA</option>
+                                <option>PSI - INSTITUTO DE PSICOLOGIA</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="row align-items-start justify-content-end">
+
+                        <!-- <div class=" col-md-6 form-group">
+                            <label >status</label>
+                        </div> -->
+                    
+                        <div class="btn-group col-md-6 controles" role="group" aria-label="Basic example">
+                            <button type="button" class="btn btn-primaria">Pesquisar</button>
+                            <button type="button" class="btn btn-secundaria">Trocar de Unidade</button>
+                        </div>              
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <!-- Div para armazenar a tabela -->
+        <div class="tab-pane fade show active" id="nav-tabela" role="tabpanel" aria-labelledby="nav-tabela-tab">
+            <table id="example" class="table table-striped" style="width:100%">
+                <!-- <button type="hiddenbutton" class="btn btn-primaria">Imprimir</button> -->
+                <thead id="tabela-cabecalho">
+                        <tr>
+                            <th>Name</th>
+                            <th>Position</th>
+                            <th>Office</th>
+                       
+                        </tr>
+                </thead>
+                <tbody>
+
+                    
+                    <tr style="background: none;" role="row">
+                    <td style="background: none;"> 
+                        <ul style="padding: 0px; height: 10px;">
+                            <il><input type="radio" name="relacao" id="relacao" value="RUG000001">&nbsp;&nbsp;Alunos ingressantes no período informado.</il>
+                        </ul>
+                    </td>
+                    <td style="background: none;">
+                                            matrícula / nome                </td>
+                                            <td style="background: none;">
+                            RUG000001                </td>
+                </tr>
+                            <tr style="background: none;" role="row">
+                    <td style="background: none;"> 
+                        <ul style="padding: 0px; height: 10px;">
+                            <il><input type="radio" name="relacao" id="relacao" value="RUG000002">&nbsp;&nbsp;Alunos ingressantes no período informado e vinculados.</il>
+                        </ul>
+                    </td>
+                    <td style="background: none;">
+                                            matrícula / nome                </td>
+                                            <td style="background: none;">
+                            RUG000002                </td>
+                </tr>
+                            <tr style="background: none;" role="row">
+                    <td style="background: none;"> 
+                        <ul style="padding: 0px; height: 10px;">
+                            <il><input type="radio" name="relacao" id="relacao" value="RGUTI0101">&nbsp;&nbsp;Alunos ingressantes por vestibular no período informado.</il>
+                        </ul>
+                    </td>
+                    <td style="background: none;">
+                                            matrícula / nome / sexo / situação                </td>
+                    <td style="background: none;">
+                            RGUTI0101                </td>
+                </tr>
+                            <tr style="background: none;" role="row">
+                    <td style="background: none;"> 
+                        <ul style="padding: 0px; height: 10px;">
+                            <il><input type="radio" name="relacao" id="relacao" value="RGUTI0102">&nbsp;&nbsp;Alunos ingressantes por transferência facultativa no período informado.</il>
+                        </ul>
+                    </td>
+                    <td style="background: none;">
+                                            matrícula / nome / sexo / situação                </td>
+                    <td style="background: none;">
+                            RGUTI0102                </td>
+                </tr>
+                            <tr style="background: none;" role="row">
+                    <td style="background: none;"> 
+                        <ul style="padding: 0px; height: 10px;">
+                            <il><input type="radio" name="relacao" id="relacao" value="RGUTI0103">&nbsp;&nbsp;Alunos ingressantes por transferência <i>Ex Officio</i> no período informado.</il>
+                        </ul>
+                    </td>
+                    <td style="background: none;">
+                                            matrícula / nome / sexo / situação                </td>
+                    <td style="background: none;">
+                            RGUTI0103                </td>
+                </tr>
+                            <tr style="background: none;" role="row">
+                    <td style="background: none;"> 
+                        <ul style="padding: 0px; height: 10px;">
+                            <il><input type="radio" name="relacao" id="relacao" value="RGUTI0104">&nbsp;&nbsp;Alunos ingressantes por aproveitamento de estudos no período informado.</il>
+                        </ul>
+                    </td>
+                    <td style="background: none;">
+                                            matrícula / nome / sexo / situação                </td>
+                    <td style="background: none;">
+                            RGUTI0104                </td>
+                </tr>
+                            <tr style="background: none;" role="row">
+                    <td style="background: none;"> 
+                        <ul style="padding: 0px; height: 10px;">
+                            <il><input type="radio" name="relacao" id="relacao" value="RGUTI0105">&nbsp;&nbsp;Alunos ingressantes por convênio no período informado.</il>
+                        </ul>
+                    </td>
+                    <td style="background: none;">
+                                            matrícula / nome / sexo / situação                </td>
+                    <td style="background: none;">
+                            RGUTI0105                </td>
+                </tr>
+                            <tr style="background: none;" role="row">
+                    <td style="background: none;"> 
+                        <ul style="padding: 0px; height: 10px;">
+                            <il><input type="radio" name="relacao" id="relacao" value="RGUTI0106">&nbsp;&nbsp;Alunos ingressantes por cortesia no período informado.</il>
+                        </ul>
+                    </td>
+                    <td style="background: none;">
+                                            matrícula / nome / sexo / situação                </td>
+                    <td style="background: none;">
+                            RGUTI0106                </td>
+                </tr>
+                            <tr style="background: none;" role="row">
+                    <td style="background: none;"> 
+                        <ul style="padding: 0px; height: 10px;">
+                            <il><input type="radio" name="relacao" id="relacao" value="RGUTI0107">&nbsp;&nbsp;Alunos ingressantes por didática especial no período informado.</il>
+                        </ul>
+                    </td>
+                    <td style="background: none;">
+                                            matrícula / nome / sexo / situação                </td>
+                    <td style="background: none;">
+                            RGUTI0107                </td>
+                </tr>
+                            <tr style="background: none;" role="row">
+                    <td style="background: none;"> 
+                        <ul style="padding: 0px; height: 10px;">
+                            <il><input type="radio" name="relacao" id="relacao" value="RGUTI0108">&nbsp;&nbsp;Alunos ingressantes por permanência de vínculo no período informado.</il>
+                        </ul>
+                    </td>
+                    <td style="background: none;">
+                                            matrícula / nome / sexo / situação                </td>
+                    <td style="background: none;">
+                            RGUTI0108                </td>
+                </tr>
+                            <tr style="background: none;" role="row">
+                    <td style="background: none;"> 
+                        <ul style="padding: 0px; height: 10px;">
+                            <il><input type="radio" name="relacao" id="relacao" value="RGUTI0201">&nbsp;&nbsp;Alunos ingressantes por vestibular no período informado.</il>
+                        </ul>
+                    </td>
+                    <td style="background: none;">
+                                            matrícula / nome / CR                </td>
+                    <td style="background: none;">
+                            RGUTI0201                </td>
+                </tr>
+                            <tr style="background: none;" role="row">
+                    <td style="background: none;"> 
+                        <ul style="padding: 0px; height: 10px;">
+                            <il><input type="radio" name="relacao" id="relacao" value="RGUTI0202">&nbsp;&nbsp;Alunos ingressantes por transferência facultativa no período informado.</il>
+                        </ul>
+                    </td>
+                    <td style="background: none;">
+                                            matrícula / nome / CR                </td>
+                    <td style="background: none;">
+                            RGUTI0202                </td>
+                </tr>
+                            <tr style="background: none;" role="row">
+                    <td style="background: none;"> 
+                        <ul style="padding: 0px; height: 10px;">
+                            <il><input type="radio" name="relacao" id="relacao" value="RGUTI0203">&nbsp;&nbsp;Alunos ingressantes por transferência <i>Ex Officio</i> no período informado.</il>
+                        </ul>
+                    </td>
+                    <td style="background: none;">
+                                            matrícula / nome / CR                </td>
+                    <td style="background: none;">
+                            RGUTI0203                </td>
+                </tr>
+                            <tr style="background: none;" role="row">
+                    <td style="background: none;"> 
+                        <ul style="padding: 0px; height: 10px;">
+                            <il><input type="radio" name="relacao" id="relacao" value="RGUTI0204">&nbsp;&nbsp;Alunos ingressantes por aproveitamento de estudos no período informado.</il>
+                        </ul>
+                    </td>
+                    <td style="background: none;">
+                                            matrícula / nome / CR                </td>
+                    <td style="background: none;">
+                            RGUTI0204                </td>
+                </tr>
+                            <tr style="background: none;" role="row">
+                    <td style="background: none;"> 
+                        <ul style="padding: 0px; height: 10px;">
+                            <il><input type="radio" name="relacao" id="relacao" value="RGUTI0205">&nbsp;&nbsp;Alunos ingressantes por convênio no período informado.</il>
+                        </ul>
+                    </td>
+                    <td style="background: none;">
+                                            matrícula / nome / CR                </td>
+                    <td style="background: none;">
+                            RGUTI0205                </td>
+                </tr>
+                            <tr style="background: none;" role="row">
+                    <td style="background: none;"> 
+                        <ul style="padding: 0px; height: 10px;">
+                            <il><input type="radio" name="relacao" id="relacao" value="RGUTI0206">&nbsp;&nbsp;Alunos ingressantes por cortesia no período informado.</il>
+                        </ul>
+                    </td>
+                    <td style="background: none;">
+                                            matrícula / nome / CR                </td>
+                    <td style="background: none;">
+                            RGUTI0206                </td>
+                </tr>
+                            <tr style="background: none;" role="row">
+                    <td style="background: none;"> 
+                        <ul style="padding: 0px; height: 10px;">
+                            <il><input type="radio" name="relacao" id="relacao" value="RGUTI0207">&nbsp;&nbsp;Alunos ingressantes por didática especial no período informado.</il>
+                        </ul>
+                    </td>
+                    <td style="background: none;">
+                                            matrícula / nome / CR                </td>
+                    <td style="background: none;">
+                            RGUTI0207                </td>
+                </tr>
+                            <tr style="background: none;" role="row">
+                    <td style="background: none;"> 
+                        <ul style="padding: 0px; height: 10px;">
+                            <il><input type="radio" name="relacao" id="relacao" value="RGUTI0208">&nbsp;&nbsp;Alunos ingressantes por permanência de vínculo no período informado.</il>
+                        </ul>
+                    </td>
+                    <td style="background: none;">
+                                            matrícula / nome / CR                </td>
+                    <td style="background: none;">
+                            RGUTI0208                </td>
+                </tr>
+                            <tr style="background: none;" role="row">
+                    <td style="background: none;"> 
+                        <ul style="padding: 0px; height: 10px;">
+                            <il><input type="radio" name="relacao" id="relacao" value="RGUTI0301">&nbsp;&nbsp;Alunos ingressantes por vestibular no período informado.</il>
+                        </ul>
+                    </td>
+                    <td style="background: none;">
+                                            matrícula / nome / sexo / situação                </td>
+                    <td style="background: none;">
+                            RGUTI0301                </td>
+                </tr>
+                            <tr style="background: none;" role="row">
+                    <td style="background: none;"> 
+                        <ul style="padding: 0px; height: 10px;">
+                            <il><input type="radio" name="relacao" id="relacao" value="RGUTI0302">&nbsp;&nbsp;Alunos ingressantes por transferência facultativa no período informado.</il>
+                        </ul>
+                    </td>
+                    <td style="background: none;">
+                                            matrícula / nome / sexo / situação                </td>
+                    <td style="background: none;">
+                            RGUTI0302                </td>
+                </tr>
+                            <tr style="background: none;" role="row">
+                    <td style="background: none;"> 
+                        <ul style="padding: 0px; height: 10px;">
+                            <il><input type="radio" name="relacao" id="relacao" value="RGUTI0303">&nbsp;&nbsp;Alunos ingressantes por transferência <i>Ex Officio</i> no período informado.</il>
+                        </ul>
+                    </td>
+                    <td style="background: none;">
+                                            matrícula / nome / sexo / situação                </td>
+                    <td style="background: none;">
+                            RGUTI0303                </td>
+                </tr>
+                            <tr style="background: none;" role="row">
+                    <td style="background: none;"> 
+                        <ul style="padding: 0px; height: 10px;">
+                            <il><input type="radio" name="relacao" id="relacao" value="RGUTI0304">&nbsp;&nbsp;Alunos ingressantes por aproveitamento de estudos no período informado.</il>
+                        </ul>
+                    </td>
+                    <td style="background: none;">
+                                            matrícula / nome / sexo / situação                </td>
+                    <td style="background: none;">
+                            RGUTI0304                </td>
+                </tr>
+                            <tr style="background: none;" role="row">
+                    <td style="background: none;"> 
+                        <ul style="padding: 0px; height: 10px;">
+                            <il><input type="radio" name="relacao" id="relacao" value="RGUTI0305">&nbsp;&nbsp;Alunos ingressantes por convênio no período informado.</il>
+                        </ul>
+                    </td>
+                    <td style="background: none;">
+                                            matrícula / nome / sexo / situação                </td>
+                    <td style="background: none;">
+                            RGUTI0305                </td>
+                </tr>
+                            <tr style="background: none;" role="row">
+                    <td style="background: none;"> 
+                        <ul style="padding: 0px; height: 10px;">
+                            <il><input type="radio" name="relacao" id="relacao" value="RGUTI0306">&nbsp;&nbsp;Alunos ingressantes por cortesia no período informado.</il>
+                        </ul>
+                    </td>
+                    <td style="background: none;">
+                                            matrícula / nome / sexo / situação                </td>
+                    <td style="background: none;">
+                            RGUTI0306                </td>
+                </tr>
+                            <tr style="background: none;" role="row">
+                    <td style="background: none;"> 
+                        <ul style="padding: 0px; height: 10px;">
+                            <il><input type="radio" name="relacao" id="relacao" value="RGUTI0307">&nbsp;&nbsp;Alunos ingressantes por didática especial no período informado.</il>
+                        </ul>
+                    </td>
+                    <td style="background: none;">
+                                            matrícula / nome / sexo / situação                </td>
+                    <td style="background: none;">
+                            RGUTI0307                </td>
+                </tr>
+                            <tr style="background: none;" role="row">
+                    <td style="background: none;"> 
+                        <ul style="padding: 0px; height: 10px;">
+                            <il><input type="radio" name="relacao" id="relacao" value="RGUTI0308">&nbsp;&nbsp;Alunos ingressantes por permanência de vínculo no período informado.</il>
+                        </ul>
+                    </td>
+                    <td style="background: none;">
+                                            matrícula / nome / sexo / situação                </td>
+                    <td style="background: none;">
+                            RGUTI0308                </td>
+                </tr>
+                            <tr style="background: none;" role="row">
+                    <td style="background: none;"> 
+                        <ul style="padding: 0px; height: 10px;">
+                            <il><input type="radio" name="relacao" id="relacao" value="RGUME0101">&nbsp;&nbsp;Alunos eliminados por conclusão no período informado.</il>
+                        </ul>
+                    </td>
+                    <td style="background: none;">
+                                            matrícula / nome                </td>
+                    <td style="background: none;">
+                            RGUME0101                </td>
+                </tr>
+                            <tr style="background: none;" role="row">
+                    <td style="background: none;"> 
+                        <ul style="padding: 0px; height: 10px;">
+                            <il><input type="radio" name="relacao" id="relacao" value="RGUME0102">&nbsp;&nbsp;Alunos eliminados por transferência no período informado.</il>
+                        </ul>
+                    </td>
+                    <td style="background: none;">
+                                            matrícula / nome                </td>
+                    <td style="background: none;">
+                            RGUME0102                </td>
+                </tr>
+                            <tr style="background: none;" role="row">
+                    <td style="background: none;"> 
+                        <ul style="padding: 0px; height: 10px;">
+                            <il><input type="radio" name="relacao" id="relacao" value="RGUME0103">&nbsp;&nbsp;Alunos eliminados por abandono no período informado.</il>
+                        </ul>
+                    </td>
+                    <td style="background: none;">
+                                            matrícula / nome                </td>
+                    <td style="background: none;">
+                            RGUME0103                </td>
+                </tr>
+                            <tr style="background: none;" role="row">
+                    <td style="background: none;"> 
+                        <ul style="padding: 0px; height: 10px;">
+                            <il><input type="radio" name="relacao" id="relacao" value="RGUME0104">&nbsp;&nbsp;Alunos eliminados por solicitação no período informado.</il>
+                        </ul>
+                    </td>
+                    <td style="background: none;">
+                                            matrícula / nome                </td>
+                    <td style="background: none;">
+                            RGUME0104                </td>
+                </tr>
+                            <tr style="background: none;" role="row">
+                    <td style="background: none;"> 
+                        <ul style="padding: 0px; height: 10px;">
+                            <il><input type="radio" name="relacao" id="relacao" value="RGUME0105">&nbsp;&nbsp;Alunos eliminados por duplicidade de nome no período informado.</il>
+                        </ul>
+                    </td>
+                    <td style="background: none;">
+                                            matrícula / nome                </td>
+                    <td style="background: none;">
+                            RGUME0105                </td>
+                </tr>
+                            <tr style="background: none;" role="row">
+                    <td style="background: none;"> 
+                        <ul style="padding: 0px; height: 10px;">
+                            <il><input type="radio" name="relacao" id="relacao" value="RGUME0106">&nbsp;&nbsp;Alunos eliminados por intergralização curricular esgotada.</il>
+                        </ul>
+                    </td>
+                    <td style="background: none;">
+                                            matrícula / nome                </td>
+                    <td style="background: none;">
+                            RGUME0106                </td>
+                </tr>
+                            <tr style="background: none;" role="row">
+                    <td style="background: none;"> 
+                        <ul style="padding: 0px; height: 10px;">
+                            <il><input type="radio" name="relacao" id="relacao" value="RGUME0107">&nbsp;&nbsp;Alunos eliminados por parecer indeferido no período informado.</il>
+                        </ul>
+                    </td>
+                    <td style="background: none;">
+                                            matrícula / nome                </td>
+                    <td style="background: none;">
+                            RGUME0107                </td>
+                </tr>
+                            <tr style="background: none;" role="row">
+                    <td style="background: none;"> 
+                        <ul style="padding: 0px; height: 10px;">
+                            <il><input type="radio" name="relacao" id="relacao" value="RGUME0108">&nbsp;&nbsp;Alunos eliminados por exigência de documentos no período informado.</il>
+                        </ul>
+                    </td>
+                    <td style="background: none;">
+                                            matrícula / nome                </td>
+                    <td style="background: none;">
+                            RGUME0108                </td>
+                </tr>
+                            <tr style="background: none;" role="row">
+                    <td style="background: none;"> 
+                        <ul style="padding: 0px; height: 10px;">
+                            <il><input type="radio" name="relacao" id="relacao" value="RGUME0111">&nbsp;&nbsp;Alunos eliminados por motivo não especificado no período informado.</il>
+                        </ul>
+                    </td>
+                    <td style="background: none;">
+                                            matrícula / nome                </td>
+                    <td style="background: none;">
+                            RGUME0111                </td>
+                </tr>
+                            <tr style="background: none;" role="row">
+                    <td style="background: none;"> 
+                        <ul style="padding: 0px; height: 10px;">
+                            <il><input type="radio" name="relacao" id="relacao" value="RGUME0113">&nbsp;&nbsp;Alunos eliminados por regras de convênio no período informado.</il>
+                        </ul>
+                    </td>
+                    <td style="background: none;">
+                                            matrícula / nome                </td>
+                    <td style="background: none;">
+                            RGUME0113                </td>
+                </tr>
+                            <tr style="background: none;" role="row">
+                    <td style="background: none;"> 
+                        <ul style="padding: 0px; height: 10px;">
+                            <il><input type="radio" name="relacao" id="relacao" value="RGUME0201">&nbsp;&nbsp;Alunos eliminados por conclusão no período informado.</il>
+                        </ul>
+                    </td>
+                    <td style="background: none;">
+                                            matrícula / nome / CR                </td>
+                    <td style="background: none;">
+                            RGUME0201                </td>
+                </tr>
+                            <tr style="background: none;" role="row">
+                    <td style="background: none;"> 
+                        <ul style="padding: 0px; height: 10px;">
+                            <il><input type="radio" name="relacao" id="relacao" value="RGUME0202">&nbsp;&nbsp;Alunos eliminados por transferência no período informado.</il>
+                        </ul>
+                    </td>
+                    <td style="background: none;">
+                                            matrícula / nome / CR                </td>
+                    <td style="background: none;">
+                            RGUME0202                </td>
+                </tr>
+                            <tr style="background: none;" role="row">
+                    <td style="background: none;"> 
+                        <ul style="padding: 0px; height: 10px;">
+                            <il><input type="radio" name="relacao" id="relacao" value="RGUME0203">&nbsp;&nbsp;Alunos eliminados por abandono no período informado.</il>
+                        </ul>
+                    </td>
+                    <td style="background: none;">
+                                            matrícula / nome / CR                </td>
+                    <td style="background: none;">
+                            RGUME0203                </td>
+                </tr>
+                            <tr style="background: none;" role="row">
+                    <td style="background: none;"> 
+                        <ul style="padding: 0px; height: 10px;">
+                            <il><input type="radio" name="relacao" id="relacao" value="RGUME0204">&nbsp;&nbsp;Alunos eliminados por solicitação no período informado.</il>
+                        </ul>
+                    </td>
+                    <td style="background: none;">
+                                            matrícula / nome / CR                </td>
+                    <td style="background: none;">
+                            RGUME0204                </td>
+                </tr>
+                            <tr style="background: none;" role="row">
+                    <td style="background: none;"> 
+                        <ul style="padding: 0px; height: 10px;">
+                            <il><input type="radio" name="relacao" id="relacao" value="RGUME0205">&nbsp;&nbsp;Alunos eliminados por duplicidade de nome no período informado.</il>
+                        </ul>
+                    </td>
+                    <td style="background: none;">
+                                            matrícula / nome / CR                </td>
+                    <td style="background: none;">
+                            RGUME0205                </td>
+                </tr>
+                            <tr style="background: none;" role="row">
+                    <td style="background: none;"> 
+                        <ul style="padding: 0px; height: 10px;">
+                            <il><input type="radio" name="relacao" id="relacao" value="RGUME0206">&nbsp;&nbsp;Alunos eliminados por intergralização curricular esgotada.</il>
+                        </ul>
+                    </td>
+                    <td style="background: none;">
+                                            matrícula / nome / CR                </td>
+                    <td style="background: none;">
+                            RGUME0206                </td>
+                </tr>
+                            <tr style="background: none;" role="row">
+                    <td style="background: none;"> 
+                        <ul style="padding: 0px; height: 10px;">
+                            <il><input type="radio" name="relacao" id="relacao" value="RGUME0207">&nbsp;&nbsp;Alunos eliminados por parecer indeferido no período informado.</il>
+                        </ul>
+                    </td>
+                    <td style="background: none;">
+                                            matrícula / nome / CR                </td>
+                    <td style="background: none;">
+                            RGUME0207                </td>
+                </tr>
+                            <tr style="background: none;" role="row">
+                    <td style="background: none;"> 
+                        <ul style="padding: 0px; height: 10px;">
+                            <il><input type="radio" name="relacao" id="relacao" value="RGUME0208">&nbsp;&nbsp;Alunos eliminados por exigência de documentos no período informado.</il>
+                        </ul>
+                    </td>
+                    <td style="background: none;">
+                                            matrícula / nome / CR                </td>
+                    <td style="background: none;">
+                            RGUME0208                </td>
+                </tr>
+                            <tr style="background: none;" role="row">
+                    <td style="background: none;"> 
+                        <ul style="padding: 0px; height: 10px;">
+                            <il><input type="radio" name="relacao" id="relacao" value="RGUME0211">&nbsp;&nbsp;Alunos eliminados por motivo não especificado no período informado.</il>
+                        </ul>
+                    </td>
+                    <td style="background: none;">
+                                            matrícula / nome / CR                </td>
+                    <td style="background: none;">
+                            RGUME0211                </td>
+                </tr>
+                            <tr style="background: none;" role="row">
+                    <td style="background: none;"> 
+                        <ul style="padding: 0px; height: 10px;">
+                            <il><input type="radio" name="relacao" id="relacao" value="RGUME0213">&nbsp;&nbsp;Alunos eliminados por regras de convênio no período informado.</il>
+                        </ul>
+                    </td>
+                    <td style="background: none;">
+                                            matrícula / nome / CR                </td>
+                    <td style="background: none;">
+                            RGUME0213                </td>
+                </tr>
+                            <tr style="background: none;" role="row">
+                    <td style="background: none;"> 
+                        <ul style="padding: 0px; height: 10px;">
+                            <il><input type="radio" name="relacao" id="relacao" value="RGUME0301">&nbsp;&nbsp;Alunos eliminados por conclusão no período informado.</il>
+                        </ul>
+                    </td>
+                    <td style="background: none;">
+                                            matrícula / nome / sexo / situação                </td>
+                    <td style="background: none;">
+                            RGUME0301                </td>
+                </tr>
+                            <tr style="background: none;" role="row">
+                    <td style="background: none;"> 
+                        <ul style="padding: 0px; height: 10px;">
+                            <il><input type="radio" name="relacao" id="relacao" value="RGUME0302">&nbsp;&nbsp;Alunos eliminados por transferência no período informado.</il>
+                        </ul>
+                    </td>
+                    <td style="background: none;">
+                                            matrícula / nome / sexo / situação                </td>
+                    <td style="background: none;">
+                            RGUME0302                </td>
+                </tr>
+                            <tr style="background: none;" role="row">
+                    <td style="background: none;"> 
+                        <ul style="padding: 0px; height: 10px;">
+                            <il><input type="radio" name="relacao" id="relacao" value="RGUME0303">&nbsp;&nbsp;Alunos eliminados por abandono no período informado.</il>
+                        </ul>
+                    </td>
+                    <td style="background: none;">
+                                            matrícula / nome / sexo / situação                </td>
+                    <td style="background: none;">
+                            RGUME0303                </td>
+                </tr>
+                            <tr style="background: none;" role="row">
+                    <td style="background: none;"> 
+                        <ul style="padding: 0px; height: 10px;">
+                            <il><input type="radio" name="relacao" id="relacao" value="RGUME0304">&nbsp;&nbsp;Alunos eliminados por solicitação no período informado.</il>
+                        </ul>
+                    </td>
+                    <td style="background: none;">
+                                            matrícula / nome / sexo / situação                </td>
+                    <td style="background: none;">
+                            RGUME0304                </td>
+                </tr>
+                            <tr style="background: none;" role="row">
+                    <td style="background: none;"> 
+                        <ul style="padding: 0px; height: 10px;">
+                            <il><input type="radio" name="relacao" id="relacao" value="RGUME0305">&nbsp;&nbsp;Alunos eliminados por duplicidade de nome no período informado.</il>
+                        </ul>
+                    </td>
+                    <td style="background: none;">
+                                            matrícula / nome / sexo / situação                </td>
+                    <td style="background: none;">
+                            RGUME0305                </td>
+                </tr>
+                            <tr style="background: none;" role="row">
+                    <td style="background: none;"> 
+                        <ul style="padding: 0px; height: 10px;">
+                            <il><input type="radio" name="relacao" id="relacao" value="RGUME0306">&nbsp;&nbsp;Alunos eliminados por intergralização curricular esgotada.</il>
+                        </ul>
+                    </td>
+                    <td style="background: none;">
+                                            matrícula / nome / sexo / situação                </td>
+                    <td style="background: none;">
+                            RGUME0306                </td>
+                </tr>
+                            <tr style="background: none;" role="row">
+                    <td style="background: none;"> 
+                        <ul style="padding: 0px; height: 10px;">
+                            <il><input type="radio" name="relacao" id="relacao" value="RGUME0307">&nbsp;&nbsp;Alunos eliminados por parecer indeferido no período informado.</il>
+                        </ul>
+                    </td>
+                    <td style="background: none;">
+                                            matrícula / nome / sexo / situação                </td>
+                    <td style="background: none;">
+                            RGUME0307                </td>
+                </tr>
+                            <tr style="background: none;" role="row">
+                    <td style="background: none;"> 
+                        <ul style="padding: 0px; height: 10px;">
+                            <il><input type="radio" name="relacao" id="relacao" value="RGUME0308">&nbsp;&nbsp;Alunos eliminados por exigência de documentos no período informado.</il>
+                        </ul>
+                    </td>
+                    <td style="background: none;">
+                                            matrícula / nome / sexo / situação                </td>
+                    <td style="background: none;">
+                            RGUME0308                </td>
+                </tr>
+                            <tr style="background: none;" role="row">
+                    <td style="background: none;"> 
+                        <ul style="padding: 0px; height: 10px;">
+                            <il><input type="radio" name="relacao" id="relacao" value="RGUME0311">&nbsp;&nbsp;Alunos eliminados por motivo não especificado no período informado.</il>
+                        </ul>
+                    </td>
+                    <td style="background: none;">
+                                            matrícula / nome / sexo / situação                </td>
+                    <td style="background: none;">
+                            RGUME0311                </td>
+                </tr>
+                            <tr style="background: none;" role="row">
+                    <td style="background: none;"> 
+                        <ul style="padding: 0px; height: 10px;">
+                            <il><input type="radio" name="relacao" id="relacao" value="RGUME0313">&nbsp;&nbsp;Alunos eliminados por regras de convênio no período informado.</il>
+                        </ul>
+                    </td>
+                    <td style="background: none;">
+                                            matrícula / nome / sexo / situação                </td>
+                    <td style="background: none;">
+                            RGUME0313                </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    
+    </section>
+      
+
+
+ <footer></footer>
+
+ <script src="../assets/bootstrap-5.3.2-dist/js/popper.min.js"></script>
+    
+    
+ <script src="../assets/bootstrap-5.3.2-dist/js/bootstrap.js" ></script>
+ 
+ <script src="../assets/DataTables/jquery-3.3.1.js"></script>
+
+ <script src="../assets/DataTables/datatables.min.js"></script>
+
+ <script type="module" src="../assets/js/TabelaView.js" ></script>
+
+    <script type="module" src="VagasOferecidasPorTurmas.js" ></script>
+
+
+</body>
+</html>

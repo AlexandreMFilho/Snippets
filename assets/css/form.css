@@ -1,0 +1,17 @@
+form label{
+    margin-left: 2%
+}
+
+form input{
+    border-radius: 5px;
+    border: none;
+    box-shadow: 2px 2px 2px 0px #ddd;
+}
+
+[data-bs-theme=dark] form input{
+    box-shadow: 2px 2px 2px 0px #333;
+}
+
+form input:active{
+    border: none;
+}
